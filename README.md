@@ -79,6 +79,27 @@ LAMBDA_API_URL = 'https://your-api-id.execute-api.your-region.amazonaws.com/your
 - AWS Credentials:- Current Method: The frontend uses AWS CLI credentials to upload files to S3.
 - Recommended Optimization:-Use Lambda for File Uploads: Implement a Lambda function to handle file uploads.
 
+## 🎯 Run the Application
+To run the frontend, use the following steps:
+
+#### Navigate to the Frontend Folder:
+
+```bash
+cd frontend
+```
+
+#### Start the Streamlit App:
+
+```bash
+streamlit run app.py
+```
+
+#### Upload CSV Files:
+
+- Upload the Dispatched and Arrival CSV files using the web interface.
+- The Lambda function will process the files, and upon successful processing, a spinner will appear indicating that the backend has started working.
+- Once the process completes, you will be provided with a Download Analysis File button. Clicking this button will allow you to download the analysis file using the presigned URL returned by the Lambda function.
+
 ## 🎨 Customization and UI Enhancements
 - Streamlit UI Improvements:-Interactive Elements: Clear instructions, buttons with icons, and progress spinners for better user experience.
 - Error Handling: User-friendly messages with appropriate emojis.
