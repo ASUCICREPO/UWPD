@@ -1,0 +1,229 @@
+{
+  "version": "38.0.1",
+  "artifacts": {
+    "UwpdFileAnalysisStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "UwpdFileAnalysisStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "UwpdFileAnalysisStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "UwpdFileAnalysisStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/59dfbcea36ac3aa09780c3549d8dfb11080f31089f193fbd596c3d6339907a9e.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "UwpdFileAnalysisStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "UwpdFileAnalysisStack.assets"
+      ],
+      "metadata": {
+        "/UwpdFileAnalysisStack/AnalysisBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AnalysisBucketD8638F5F"
+          }
+        ],
+        "/UwpdFileAnalysisStack/AnalysisBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AnalysisBucketPolicy0D04FC1D"
+          }
+        ],
+        "/UwpdFileAnalysisStack/AnalysisBucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AnalysisBucketAutoDeleteObjectsCustomResourceFF2E29AF"
+          }
+        ],
+        "/UwpdFileAnalysisStack/LatestNodeRuntimeMap": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LatestNodeRuntimeMap"
+          }
+        ],
+        "/UwpdFileAnalysisStack/Custom::S3AutoDeleteObjectsCustomResourceProvider": [
+          {
+            "type": "aws:cdk:is-custom-resource-handler-customResourceProvider",
+            "data": true
+          }
+        ],
+        "/UwpdFileAnalysisStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+          }
+        ],
+        "/UwpdFileAnalysisStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
+          }
+        ],
+        "/UwpdFileAnalysisStack/CreateDispatchedFolder/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateDispatchedFolderAwsCliLayer7ED7FB21"
+          }
+        ],
+        "/UwpdFileAnalysisStack/CreateDispatchedFolder/CustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateDispatchedFolderCustomResource8F5BE0DA"
+          }
+        ],
+        "/UwpdFileAnalysisStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C": [
+          {
+            "type": "aws:cdk:is-custom-resource-handler-singleton",
+            "data": true
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+            "data": 2
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-singleton",
+            "data": true
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+            "data": 2
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-singleton",
+            "data": true
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+            "data": 2
+          }
+        ],
+        "/UwpdFileAnalysisStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265"
+          }
+        ],
+        "/UwpdFileAnalysisStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF"
+          }
+        ],
+        "/UwpdFileAnalysisStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536"
+          }
+        ],
+        "/UwpdFileAnalysisStack/CreateArrivalFolder/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateArrivalFolderAwsCliLayer9F98D933"
+          }
+        ],
+        "/UwpdFileAnalysisStack/CreateArrivalFolder/CustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateArrivalFolderCustomResourceDB0F298F"
+          }
+        ],
+        "/UwpdFileAnalysisStack/CreateAnalysisFolder/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateAnalysisFolderAwsCliLayer0840F23B"
+          }
+        ],
+        "/UwpdFileAnalysisStack/CreateAnalysisFolder/CustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateAnalysisFolderCustomResource3CD2FFB7"
+          }
+        ],
+        "/UwpdFileAnalysisStack/LambdaExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaExecutionRoleD5C26073"
+          }
+        ],
+        "/UwpdFileAnalysisStack/S3AccessPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "S3AccessPolicyB63854F5"
+          }
+        ],
+        "/UwpdFileAnalysisStack/AnalysisLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AnalysisLambda08502239"
+          }
+        ],
+        "/UwpdFileAnalysisStack/AnalysisLambda/FunctionUrl/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AnalysisLambdaFunctionUrlAE2FFC12"
+          }
+        ],
+        "/UwpdFileAnalysisStack/AnalysisLambda/invoke-function-url": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AnalysisLambdainvokefunctionurl360C6FD7"
+          }
+        ],
+        "/UwpdFileAnalysisStack/LambdaFunctionURL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaFunctionURL"
+          }
+        ],
+        "/UwpdFileAnalysisStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/UwpdFileAnalysisStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/UwpdFileAnalysisStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/UwpdFileAnalysisStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "UwpdFileAnalysisStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
